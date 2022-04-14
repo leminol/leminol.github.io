@@ -54,6 +54,10 @@ body {
 
 .col-3{width: 100%;}
 .col-9{width: 100%;}
+.col-4{width: 66.66%;}
+.col-2{width: 33.33%;}
+.col-6{width: 100%;}
+.hider{display: none;}
 
 @media only screen and (min-width: 768px){
     .col-9{width: 75%;}
@@ -61,6 +65,7 @@ body {
     .col-4{width: 33.33%;}
     .col-2{width: 16.66%;}
     .col-6{width: 50%;}
+    .hider{display: inline;}
 }
 /*Footer*/
 .footer{
