@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="src/loader.js"></script> 
-        <!--Head file, Header, Navigation Bar-->
-        <div w3-include-html="src/top.html"></div> 
+    <head><!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NM71KDYT9Q"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-NM71KDYT9Q');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hobby Blog">
+        <meta name="keywords" content="?????????">
+        <meta name="author" content="Leminol">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Photos/favicon.ico" type="image/x-icon" />
     </head>
     <body>
+        <!--Header-->
+        <h1 class="header">leminol.github.io</h1>
+        <!--Navigation Bar-->
+        <div class="topnav">
+            <a href="https://leminol.github.io/">Anasayfa</a>
+            <a href="all.html">Yazılar</a>
+            <a href="https://github.com/leminol" style="float: right;">Github</a>
+        </div>
         <!--Content-->
         <div class="row">
             <div class="col-9 content">
@@ -16,11 +37,9 @@
             </div>
         </div>
         <!--Footer-->
-        <div w3-include-html="src/footer.html"></div> 
-
-        <script>
-            includeHTML();
-        </script>
-
-    </body>
+        <div class="footer">
+            <br><br><p>Bu sayfa <b>leminol</b> tarafından hazırlanmıştır.</p>
+            <p style="text-align: right;">2022-2022</p>
+        </div>
+        </body>
 </html>
