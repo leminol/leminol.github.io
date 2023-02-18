@@ -1,46 +1,32 @@
 <!Doctype html>
 <html>
-<head><!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NM71KDYT9Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-NM71KDYT9Q');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="description" content="Hobby Blog">
-    <meta name="keywords" content="?????????">
-    <meta name="author" content="Leminol">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <script src="../src/loader.js"></script> 
+        <!--Head file, Header, Navigation Bar-->
+        <div w3-include-html="../src/top.html"></div> 
+    </head>
+    <body>
 
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="icon" href="Photos/favicon.ico" type="image/x-icon" />
-</head>
-<body>
-<!--Header-->
-<h1 class="header">leminol.github.io</h1> <!--Navigation Bar-->
- <div class="topnav">
-    <a href="https://leminol.github.io/">Anasayfa</a>
-    <a href="../../all.html">Yazılar</a>
-    <a href="https://github.com/leminol" style="float: right;">Github</a>
-</div><!--Content-->
-<div class="row">
-    <div class="col-9 content">
-        <h1>Sha-256 (Secure Hashing Algorithm) Nasıl Çalışır?</h1>
-        <p>Öncelikle girdimizi <a href="https://tr.wikipedia.org/wiki/%C4%B0kili_say%C4%B1_sistemi">binary</a>e dönüştürüyoruz. Bizim örneğimizde bu <b>Hello World</b> olacak. Kendi girdinizi <a href="https://www.rapidtables.com/convert/number/ascii-to-binary.html">rapidtables</a>dan binarye dönüştürebilirsiniz.</p>
-        <p class="code">Hello World -><br>01001000 01100101 01101100 01101100<br>01101111 00100000 01010111 01101111<br>01110010 01101100 01100100</p>
-        <p>Sonrasında Bu binary dizisinin sonuna 1 ekliyoruz. Tabi bunu 8 bitlik paketler halinde eklememiz gerektiği için bunu 10000000 şeklinde ekliyoruz.</p>
-        <p class="code">01001000 01100101 01101100 01101100<br>01101111 00100000 01010111 01101111<br>01110010 01101100 01100100 10000000</p>
-        <p>Bu dizinin uzunluğu olan 88(1011000)'i ki bunu 0 ve 1 leri sayarak da bulabilirsiniz, 64 bitlik bir paket halinde , 64-bit big-endian integer , dizinin sonuna ekleyeceğiz ama öncelikle ekleyeceğimiz yerden önce 352 tane sıfır ekleyeceğiz. Bunun sebebi bu diziyi 512 ile bölünebilir yapmak. İşleme buradan bakabilirsiniz:</p>
-        <p class="code">88(ilk dizinin uzunluğu) + 8(sona eklediğimiz 10000000) + 352(sıfırlar) + 64(eklediğimiz 64-bit big-endian number) = 512</p>
-        <h1 style="text-align: center;">...</h1>
-    </div>
-    <div class="col-3 content">
-    </div>
-</div><!--Footer-->
-<div class="footer">
-    <br><br><p>Bu sayfa <b>leminol</b> tarafından hazırlanmıştır.</p>
-</div>
-</body>
+        <!--Content-->
+        <div class="row">
+            <div class="col-9 content">
+                <h1>Sha-256 (Secure Hashing Algorithm) Nasıl Çalışır?</h1>
+                <p>Öncelikle girdimizi <a href="https://tr.wikipedia.org/wiki/%C4%B0kili_say%C4%B1_sistemi">binary</a>e dönüştürüyoruz. Bizim örneğimizde bu <b>Hello World</b> olacak. Kendi girdinizi <a href="https://www.rapidtables.com/convert/number/ascii-to-binary.html">rapidtables</a>dan binarye dönüştürebilirsiniz.</p>
+                <p class="code">Hello World -><br>01001000 01100101 01101100 01101100<br>01101111 00100000 01010111 01101111<br>01110010 01101100 01100100</p>
+                <p>Sonrasında Bu binary dizisinin sonuna 1 ekliyoruz. Tabi bunu 8 bitlik paketler halinde eklememiz gerektiği için bunu 10000000 şeklinde ekliyoruz.</p>
+                <p class="code">01001000 01100101 01101100 01101100<br>01101111 00100000 01010111 01101111<br>01110010 01101100 01100100 10000000</p>
+                <p>Bu dizinin uzunluğu olan 88(1011000)'i ki bunu 0 ve 1 leri sayarak da bulabilirsiniz, 64 bitlik bir paket halinde , 64-bit big-endian integer , dizinin sonuna ekleyeceğiz ama öncelikle ekleyeceğimiz yerden önce 352 tane sıfır ekleyeceğiz. Bunun sebebi bu diziyi 512 ile bölünebilir yapmak. İşleme buradan bakabilirsiniz:</p>
+                <p class="code">88(ilk dizinin uzunluğu) + 8(sona eklediğimiz 10000000) + 352(sıfırlar) + 64(eklediğimiz 64-bit big-endian number) = 512</p>
+                <h1 style="text-align: center;">...</h1>
+            </div>
+            <div class="col-3 content">
+            </div>
+        </div>
+        <!--Footer-->
+        <div w3-include-html="../src/footer.html"></div> 
+
+        <script>
+            includeHTML();
+        </script>
+    </body>
+</html>
