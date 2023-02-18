@@ -2,17 +2,13 @@
 <html>
     <head>
         <script src="src/loader.js"></script> 
-        <div w3-include-html="src/head.html"></div> 
+        <div include-html="src/head.html"></div> 
     </head>
     <body>
         <!--Header-->
-        <h1 class="header">leminol.github.io</h1>
+        <div include-html="src/header.html"></div> 
         <!--Navigation Bar-->
-        <div class="topnav">
-            <a href="https://leminol.github.io/">Anasayfa</a>
-            <a href="all.html">Yazılar</a>
-            <a href="https://github.com/leminol" style="float: right;">Github</a>
-        </div>
+        <div include-html="src/navigation.html"></div> 
         <!--Content-->
         <div class="row">
             <div class="col-9 content">
@@ -23,10 +19,7 @@
             </div>
         </div>
         <!--Footer-->
-        <div class="footer">
-            <br><br><p>Bu sayfa <b>leminol</b> tarafından hazırlanmıştır.</p>
-            <p style="text-align: right;">2022-2022</p>
-        </div>
+        <div include-html="src/footer.html"></div> 
 
         <script>
             includeHTML();
