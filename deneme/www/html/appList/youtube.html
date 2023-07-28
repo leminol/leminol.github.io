@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../mergeFiles/merger.js"></script>
+</head>
+<script>
+	function main(){
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var url = "https://www.youtube.com"
+
+		if (isMobile){
+			var url = "intent://youtube.com/#Intent;scheme=https;package=com.google.android.youtube;end";
+			document.getElementById("isMobileText").textContent = "Mobile Browser";
+		}
+		window.location.replace(url);
+	}
+</script>
+<body onload="main()">
+	<p id="isMobileText">Desktop/Web Browser</p>
+	<div include="../../mergeFiles/body.html"></div> 
+
+	<script> includeHTML()</script>
+</body>
+</html>
